@@ -13,5 +13,11 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
+    // Ensure compatibility with older Node.js versions
+    target: 'es2015',
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion'],
   },
 })
